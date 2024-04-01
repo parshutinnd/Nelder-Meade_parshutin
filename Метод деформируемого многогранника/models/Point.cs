@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FunctionParser;
 
-namespace Метод_деформируемого_многогранника
+namespace OptimizationMethods.models
 {
     class ValueIncreasingComparer : IComparer<Point>
     {
@@ -32,7 +32,7 @@ namespace Метод_деформируемого_многогранника
             coords = (double[])arr.Clone();
             dimension = coords.Length;
         }
-        public Point(double[] arr, Expression exp): this(arr)
+        public Point(double[] arr, Expression exp) : this(arr)
         {
             if (exp != null) value = exp.CalculateValue(coords);
         }
